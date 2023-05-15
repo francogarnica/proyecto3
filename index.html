@@ -5,13 +5,38 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Proyecto JS</title>
-        
+        <!-- link de mi css -->
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- Font  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <h1> SIMULADOR DE TIENDA </h1>
-        <h2>Por: Franco Antonio Garnica</h2>
+        <header>
+            <h1> SIMULADOR DE TIENDA </h1>
+            <h2>Por: Franco Antonio Garnica</h2>
+            <div class="filaFiltrador">
+                <p>Filtrar productos:</p>
+                <select name="cosa" id="filtrador">
+                    <option value="0">todos</option>
+                    <option value="1">computadoras</option>
+                    <option value="2">televisores</option>
+                </select>
+            </div>
+        </header>
+        
+        <main>
+            <div class="galeria" id="seccionProductos">
+            <!-- PRODUCTOS INYECTADOS POR JS -->
+            </div>
 
-        <script src="js/main.js"></script>
+        </main>
+
+        <footer>
+            <a href="pages/carrito.html">IR AL CARRITO</a>
+        </footer>
+        <script src="js/main.js" type="module"></script>
     </body>
 </html>
