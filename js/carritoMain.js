@@ -1,5 +1,5 @@
 
-import { Carrito } from "./productos.js";
+import { Carrito } from "./Carrito.js";
 
 const contenedorCarrito = document.getElementById("seccionCarrito");
 let carrito = (JSON.parse(localStorage.getItem("carrito")));
@@ -32,12 +32,12 @@ carrito.productos.forEach(producto => {
     contenedorCarrito.appendChild(divCarrito);
 
     botonEliminar.addEventListener("click", function () {
-        
         carrito.eliminarProducto(producto);
         localStorage.clear();
         
         localStorage.setItem("carrito", JSON.stringify(carrito));
         location.reload();
+
         
         
     });

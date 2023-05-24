@@ -1,0 +1,41 @@
+[
+    {
+        "nombre": "Computadora HP",
+        "tipo": "computadora",
+        "precio": 15000,
+        "img": "img/ComputadoraHP.jpg"
+        
+    },
+    {
+        "nombre": "Computadora ASUS",
+        "tipo": "computadora",
+        "precio": 20000,
+        "img": "img/ComputadoraAsus.jpg"
+    },
+    {
+        "nombre": "Computadora Samsung",
+        "tipo": "computadora",
+        "precio": 17000,
+        "img": "img/ComputadoraSamsung.jpg"
+    },
+    {
+        "nombre": "Televisor LG",
+        "tipo": "televisor",
+        "precio": 30000,
+        "img": "img/TelevisorLG.jpg"
+    },
+    {
+        "nombre": "Televisor Samsung",
+        "tipo": "televisor",
+        "precio": 40000,
+        "img": "img/TelevisorSamsung.jpg"
+    },
+    {
+        "nombre": "Televisor Smart Hitachi",
+        "tipo": "televisor",
+        "precio":60000,
+        "img": "img/TelevisorHitachi.jpg"
+    }
+]
+
+

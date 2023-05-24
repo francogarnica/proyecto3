@@ -11,6 +11,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+        <!-- Script del sweetalert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
 
     <body>
@@ -19,7 +21,7 @@
             <h2>Por: Franco Antonio Garnica</h2>
             <div class="filaFiltrador">
                 <p>Filtrar productos:</p>
-                <select name="cosa" id="filtrador">
+                <select name="cosa" id="filtros">
                     <option value="0">todos</option>
                     <option value="1">computadoras</option>
                     <option value="2">televisores</option>
@@ -28,6 +30,10 @@
         </header>
         
         <main>
+            <div>
+                <p class="cadenaOferta" id="cadena"></p>
+            </div>
+
             <div class="galeria" id="seccionProductos">
             <!-- PRODUCTOS INYECTADOS POR JS -->
             </div>
@@ -37,6 +43,7 @@
         <footer>
             <a href="pages/carrito.html">IR AL CARRITO</a>
         </footer>
+        
         <script src="js/main.js" type="module"></script>
     </body>
 </html>
