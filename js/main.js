@@ -32,7 +32,7 @@ imprimirCadena();
 
 let etiquetas = [];
 
-fetch("./data/productos.json")
+fetch("../data/productos.json")
 .then(response => response.json())
 .then(data =>{
     data.forEach(producto => {
