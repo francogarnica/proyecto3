@@ -1,5 +1,5 @@
 //Importo clase Carrito
-import { Carrito } from './Carrito.js'; 
+import { Carrito } from 'Carrito.js'; 
 
 let carrito = (JSON.parse(localStorage.getItem("carrito")));
 carrito = new Carrito(carrito.productos, carrito.total);

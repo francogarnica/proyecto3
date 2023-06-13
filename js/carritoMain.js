@@ -1,5 +1,5 @@
 
-import { Carrito } from "./Carrito.js";
+import { Carrito } from "Carrito.js";
 
 const contenedorCarrito = document.getElementById("seccionCarrito");
 let carrito = (JSON.parse(localStorage.getItem("carrito")));
