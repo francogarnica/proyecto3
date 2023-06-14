@@ -77,7 +77,6 @@ fetch("./data/productos.json")
             carrito.agregarProducto(producto);
             localStorage.clear();
             localStorage.setItem("carrito", JSON.stringify(carrito));
-            console.log(JSON.stringify(carrito));
         });
     })
 },1000000);
