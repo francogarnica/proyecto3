@@ -37,49 +37,49 @@ imprimirCadena();
 
 let etiquetas = [];
 
-fetch('../data/productos.json')
-.then(response => response.json())
-.then(data =>{
-    data.forEach(producto => {
-        const divProductos = document.createElement('div');
-        divProductos.classList.add(producto.tipo);
+fetch('data/productos.json')
+    .then(response => response.json())
+    .then(data =>{
+        data.forEach(producto => {
+            const divProductos = document.createElement('div');
+            divProductos.classList.add(producto.tipo);
+            
+            let i = 0;
+            while (producto.tipo != etiquetas[i] && i <= etiquetas.length) {
+                i++;
+            }
+            if (i > etiquetas.length) {
+                etiquetas.push(producto.tipo);
+            }
+            const imagen = document.createElement('img');
+            imagen.src = producto.img;
         
-        let i = 0;
-        while (producto.tipo != etiquetas[i] && i <= etiquetas.length) {
-            i++;
-        }
-        if (i > etiquetas.length) {
-            etiquetas.push(producto.tipo);
-        }
-        const imagen = document.createElement('img');
-        imagen.src = producto.img;
-    
-        const nombre = document.createElement('h2');
-        nombre.textContent = producto.nombre;
+            const nombre = document.createElement('h2');
+            nombre.textContent = producto.nombre;
+            
+            const precio = document.createElement('p');
+            precio.textContent = "precio:" + producto.precio;
         
-        const precio = document.createElement('p');
-        precio.textContent = "precio:" + producto.precio;
-    
-        const botonAgregar = document.createElement('button');
-        botonAgregar.innerText = "Agregar";
-        botonAgregar.className = "boton";
-    
-    
-        divProductos.appendChild(imagen);
-        divProductos.appendChild(nombre);
-        divProductos.appendChild(precio);
-        divProductos.appendChild(botonAgregar);
-    
-        contenedor.appendChild(divProductos);
-    
-        botonAgregar.addEventListener("click", function () {
-            Swal.fire('Agregado al carrito','gracias','success');
-            carrito.agregarProducto(producto);
-            localStorage.clear();
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-        });
-    })
-},1000000);
+            const botonAgregar = document.createElement('button');
+            botonAgregar.innerText = "Agregar";
+            botonAgregar.className = "boton";
+        
+        
+            divProductos.appendChild(imagen);
+            divProductos.appendChild(nombre);
+            divProductos.appendChild(precio);
+            divProductos.appendChild(botonAgregar);
+        
+            contenedor.appendChild(divProductos);
+        
+            botonAgregar.addEventListener("click", function () {
+                Swal.fire('Agregado al carrito','gracias','success');
+                carrito.agregarProducto(producto);
+                localStorage.clear();
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+            });
+        })
+    },1000000);
 
 
 //FILTRADOR
