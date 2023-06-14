@@ -3,7 +3,7 @@ import { Carrito } from "./Carrito.js";
 
 const contenedorCarrito = document.getElementById("seccionCarrito");
 let carrito = (JSON.parse(localStorage.getItem("carrito")));
-if (carrito == null) {
+if (carrito == undefined) {
     carrito = new Carrito([], 0);
 } else {
     carrito = new Carrito(carrito.productos, carrito.total);
