@@ -3,7 +3,11 @@ import { Carrito } from "./Carrito.js";
 
 const contenedorCarrito = document.getElementById("seccionCarrito");
 let carrito = (JSON.parse(localStorage.getItem("carrito")));
-carrito = new Carrito(carrito.productos, carrito.total);
+if (carrito == null) {
+    carrito = new Carrito(0, 0);
+} else {
+    carrito = new Carrito(carrito.productos, carrito.total);
+}
 
 let contenedorTotal = document.getElementById("seccionTotal");
 

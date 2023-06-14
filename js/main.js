@@ -2,7 +2,12 @@
 import { Carrito } from './Carrito.js'; 
 
 let carrito = (JSON.parse(localStorage.getItem("carrito")));
-carrito = new Carrito(carrito.productos, carrito.total);
+if (carrito == null) {
+    carrito = new Carrito(0, 0);
+} else {
+    carrito = new Carrito(carrito.productos, carrito.total);
+}
+
 
 const contenedor = document.getElementById("seccionProductos");
 
@@ -32,7 +37,7 @@ imprimirCadena();
 
 let etiquetas = [];
 
-fetch("../data/productos.json")
+fetch("./data/productos.json")
 .then(response => response.json())
 .then(data =>{
     data.forEach(producto => {
