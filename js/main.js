@@ -3,7 +3,7 @@ import { Carrito } from './Carrito.js';
 
 let carrito = (JSON.parse(localStorage.getItem("carrito")));
 if (carrito == null) {
-    carrito = new Carrito(0, 0);
+    carrito = new Carrito([], 0);
 } else {
     carrito = new Carrito(carrito.productos, carrito.total);
 }
